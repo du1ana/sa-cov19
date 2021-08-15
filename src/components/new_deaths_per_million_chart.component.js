@@ -17,9 +17,8 @@ export default class NDPMChart extends Component {
 
     render(){
             return (
-            <div className=""> New deaths (per million)
+            <div className="chartContainer"> <b>New deaths (per million)</b>
                 <br/>
-                <div className="">
                     <Line
                     data={{
                         labels:this.props.data.labels,
@@ -84,7 +83,7 @@ export default class NDPMChart extends Component {
                       }}
                     options={{
                         responsive:true,
-                        maintainAspectRatio: true,
+                        maintainAspectRatio: false,
                         title:{
                         display:true,
                         text:'New deaths (per million)',
@@ -105,7 +104,6 @@ export default class NDPMChart extends Component {
                     }}
                     />
                 </div>
-            </div>
             )
     }
 

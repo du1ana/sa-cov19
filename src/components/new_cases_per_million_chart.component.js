@@ -17,9 +17,8 @@ export default class NCPMChart extends Component {
 
     render(){
             return (
-            <div className=""> New cases (per million)
+            <div className="chartContainer"> <b>New cases (per million)</b>
                 <br/>
-                <div className="">
                     <Line
                     data={{
                         labels:this.props.data.labels,
@@ -117,7 +116,7 @@ export default class NCPMChart extends Component {
                       }}
                     options={{
                         responsive:true,
-                        maintainAspectRatio: true,
+                        maintainAspectRatio: false,
                         title:{
                         display:true,
                         text:'New cases (per million)',
@@ -132,12 +131,10 @@ export default class NCPMChart extends Component {
 
                             bottom:100
                           }
-                          
                         }
 
                     }}
                     />
-                </div>
             </div>
             )
     }

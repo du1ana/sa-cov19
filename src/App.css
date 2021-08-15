@@ -3,10 +3,22 @@
   margin-top: 5px;
 }
 
-h3{
-  display: inline;
-  padding-right: 20px;
-  
+.btn{
+  height: min-content;
+  width: min-content;
+}
+
+
+
+.home{
+  height: 99vh;
+  max-height: 99vh;
+}
+
+.chartContainer{
+  display: block;
+  height: 90vh;
+  max-height: 90vh;
 }
 
 

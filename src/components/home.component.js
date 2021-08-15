@@ -212,29 +212,35 @@ export default class Home extends Component {
             return (<div>Data error</div>)
         }else{
             return (
-<div>
-  <h3>South Asian COVID-19 statistics</h3>
-  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+  <div className="home container">
+    <div className="header row">
+      <div className="col-md-7 col-sm-12">
+        <h3>South Asian COVID-19 statistics</h3>
+      </div> 
+      <div className="btn-group btn-group-sm col-md-5 col-sm-12" role="group" aria-label="Basic example">
 
-    <button type="button" 
-      onClick={() => this.handleNavigation("nc")}
-      className={(this.state.nav==='nc')?"btn btn-sm btn-primary":"btn btn-sm btn-secondary"} >
-      New Cases
-    </button>
+          <button type="button" 
+            onClick={() => this.handleNavigation("nc")}
+            className={(this.state.nav==='nc')?"btn btn-sm btn-primary active":"btn btn-sm btn-primary"} >
+            New Cases
+          </button>
 
-    <button type="button" 
-    onClick={() => this.handleNavigation("tc")}
-    className={(this.state.nav==='tc')?"btn btn-sm btn-primary":"btn btn-sm btn-secondary"} >
-      Total Cases
-    </button>
+          <button type="button" 
+            onClick={() => this.handleNavigation("tc")}
+            className={(this.state.nav==='tc')?"btn btn-sm btn-primary active":"btn btn-sm btn-primary"} >
+              Total Cases
+          </button>
 
-    <button type="button" 
-    onClick={() => this.handleNavigation("nd")}
-    className={(this.state.nav==='nd')?"btn btn-sm btn-primary":"btn btn-sm btn-secondary"} >
-      New Deaths
-      </button>
+          <button type="button" 
+            onClick={() => this.handleNavigation("nd")}
+            className={(this.state.nav==='nd')?"btn btn-sm btn-primary active":"btn btn-sm btn-primary"} >
+              New Deaths
+            </button>
 
+      </div>
   </div>
+  
+ 
   {(this.state.nav==='nc')?<NCPMChart className="chartcontainer" data={this.state}/>:null}
   {(this.state.nav==='tc')?<TCPMChart className="chartcontainer" data={this.state}/>:null}
   {(this.state.nav==='nd')?<NDPMChart className="chartcontainer" data={this.state}/>:null}

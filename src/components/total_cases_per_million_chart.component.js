@@ -9,17 +9,21 @@ export default class TCPMChart extends Component {
         loading:true,
         labels:null
       };
-
+      this.onHover=this.onHover.bind(this);
     }
+
+    onHover(e) {
+       e.target.style.cursor = 'pointer';
+    }
+
     componentDidMount() {
       }
 
 
     render(){
             return (
-            <div className=""> Total cases (per million)
+            <div className="chartContainer"> <b>Total cases (per million)</b>
                 <br/>
-                <div className="">
                     <Line
                     data={{
                         labels:this.props.data.labels,
@@ -117,7 +121,7 @@ export default class TCPMChart extends Component {
                       }}
                     options={{
                         responsive:true,
-                        maintainAspectRatio: true,
+                        maintainAspectRatio: false,
                         title:{
                         display:true,
                         text:'Total cases (per million)',
@@ -138,7 +142,6 @@ export default class TCPMChart extends Component {
                     }}
                     />
                 </div>
-            </div>
             )
     }
 
