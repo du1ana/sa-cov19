@@ -22,7 +22,7 @@ export default class TCPMChart extends Component {
 
     render(){
             return (
-            <div className="chartContainer"> <b>Total cases (per million)</b>
+            <div className="chartContainer"> <b>Cumulative confirmed COVID-19 cases (per million people)</b>
                 <br/>
                     <Line
                     data={{

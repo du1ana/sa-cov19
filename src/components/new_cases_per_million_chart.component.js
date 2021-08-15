@@ -17,7 +17,7 @@ export default class NCPMChart extends Component {
 
     render(){
             return (
-            <div className="chartContainer"> <b>New cases (per million)</b>
+            <div className="chartContainer"> <b>Daily new confirmed COVID-19 cases (per million people)</b>
                 <br/>
                     <Line
                     data={{

@@ -17,7 +17,7 @@ export default class NDPMChart extends Component {
 
     render(){
             return (
-            <div className="chartContainer"> <b>New deaths (per million)</b>
+            <div className="chartContainer"> <b>Daily new COVID-19 deaths (per million people)</b>
                 <br/>
                     <Line
                     data={{

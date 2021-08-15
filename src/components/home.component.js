@@ -228,7 +228,7 @@ export default class Home extends Component {
           <button type="button" 
             onClick={() => this.handleNavigation("tc")}
             className={(this.state.nav==='tc')?"btn btn-sm btn-primary active":"btn btn-sm btn-primary"} >
-              Total Cases
+              Cumulative Cases
           </button>
 
           <button type="button" 
@@ -244,6 +244,7 @@ export default class Home extends Component {
   {(this.state.nav==='nc')?<NCPMChart className="chartcontainer" data={this.state}/>:null}
   {(this.state.nav==='tc')?<TCPMChart className="chartcontainer" data={this.state}/>:null}
   {(this.state.nav==='nd')?<NDPMChart className="chartcontainer" data={this.state}/>:null}
+<footer>Developed by <a href="https://du1ana.github.io/">Dulana Peiris</a>. Data by <a href="https://ourworldindata.org/coronavirus-source-data">Our World in Data</a>. </footer>
 </div>
                 
             )
