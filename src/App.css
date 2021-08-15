@@ -22,9 +22,6 @@
 }
 
 footer{
-  position: absolute;
-  width: 100%;
-  text-align: center;
   z-index: 1;
   margin-top: -3vh;
 }
